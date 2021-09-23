@@ -18,7 +18,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
         if(!gestrichen[p]){
             return true;
         }else{
-            return false;s
+            return false;
         }
     }
 
@@ -50,5 +50,16 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
         gestrichen[0] = true;
         gestrichen[1] = true;
         return gestrichen;
+    }
+    
+    public void ngPrimeCalculation(){
+        int ng[] = new int[o/2-1];
+        int ngZahl = 4;
+        for(int i = 0;i<ng.length;i++){
+            ng[i] = ngZahl;
+            ngZahl = ngZahl + 2;
+        }
+        
+        
     }
 }

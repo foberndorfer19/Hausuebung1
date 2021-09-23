@@ -13,22 +13,33 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
     
     @Override
     public boolean isPrime(int p) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        boolean gestrichen[] = getGestrichen();
+        
+        if(!gestrichen[p]){
+            return true;
+        }else{
+            return false;s
+        }
     }
 
     @Override
     public void printPrimes() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        boolean gestrichen[] = getGestrichen();
+        
+        for(int i = 2;i<gestrichen.length;i++){
+            if(!gestrichen[i]){
+                System.out.println(i);
+            }
+        }
     }
     
     public boolean[] getGestrichen(){
         boolean gestrichen[] = new boolean[o+1];
         
-        
         for(int i = 2;i<gestrichen.length;i++){
             if(!gestrichen[i]){
+                int x = i*i;
                 for(int j = 0;j<o;j++){
-                    int x = i*i;
                     if(x == j){
                         gestrichen[j] = true;
                         x = x+i;
@@ -36,6 +47,8 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
                 }
             }
         }
+        gestrichen[0] = true;
+        gestrichen[1] = true;
         return gestrichen;
     }
 }

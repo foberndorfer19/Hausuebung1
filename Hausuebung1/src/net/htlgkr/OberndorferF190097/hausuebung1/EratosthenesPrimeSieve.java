@@ -54,12 +54,24 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
     
     public void ngPrimeCalculation(){
         int ng[] = new int[o/2-1];
+        boolean gestrichen[] = getGestrichen();
+        List<String> primeNumbers = new ArrayList<>();
+        
+        for(int i = 0;i<gestrichen.length;i++){
+            
+        }
+        
         int ngZahl = 4;
-        for(int i = 0;i<ng.length;i++){
+        for(int i = 0;i<ng.length;i++){ //ng Zahlen festlegen
             ng[i] = ngZahl;
             ngZahl = ngZahl + 2;
         }
         
         
+        for(int i = 0;i<ng.length;i++){
+            int ngNumber = ng[i];
+            
+            
+        }
     }
 }

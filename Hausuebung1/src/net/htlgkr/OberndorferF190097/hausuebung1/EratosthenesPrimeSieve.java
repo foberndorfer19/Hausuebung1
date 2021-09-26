@@ -58,7 +58,9 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
         List<String> primeNumbers = new ArrayList<>();
         
         for(int i = 0;i<gestrichen.length;i++){
-            
+            if(!gestrichen[i]){
+                primeNumbers.add(Integer.toString(i)); //Primzahlen speichern
+            }
         }
         
         int ngZahl = 4;
@@ -70,8 +72,13 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
         
         for(int i = 0;i<ng.length;i++){
             int ngNumber = ng[i];
-            
-            
+            for(int j = 0;j<primeNumbers.size();j++){
+                for(int x = 0;x<primeNumbers.size();x++){
+                    if(ngNumber == Integer.parseInt(primeNumbers.get(j))+Integer.parseInt(primeNumbers.get(x))){
+                        System.out.println(ngNumber + "summe: "+ngNumber + " = " + Integer.parseInt(primeNumbers.get(j)) + " + " + Integer.parseInt(primeNumbers.get(x)));
+                    }
+                }
+            }
         }
     }
 }
